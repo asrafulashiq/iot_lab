@@ -1,9 +1,9 @@
-from socket import socket
+import socket
 
 serverName = 'enigma-decoder.local'
 serverPort = 31319
 
-clientSocket = socket(socket.AF_INET, socket.SOCK_STREAM)
+clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 
 sentence = input("Input lowercase sentence:")
